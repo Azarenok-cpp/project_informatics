@@ -14,4 +14,35 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\V2\text1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text1s.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text2s.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text3.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text3s.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text4.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\V2\text4s.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\V2\texts.zip">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
