@@ -7,13 +7,13 @@ using namespace std;
 
 int main() {
 	system("chcp 65001");
-
+	string path = "..\\V2\\";
 	string* texts = new string[4]{};
 	
-	ifstream file1("text1.txt"); //fix filepaths, only text1 works properly
-	ifstream file2("text2.txt");
-	ifstream file3("text3.txt");
-	ifstream file4("text4.txt");
+	ifstream file1(path + "text1.txt");
+	ifstream file2(path + "text2.txt");
+	ifstream file3(path + "text3.txt");
+	ifstream file4(path + "text4.txt");
 
 	string line;
 	while (getline(file1, line)) {
@@ -32,7 +32,7 @@ int main() {
 
 
 
-	//cout << texts[0];
+	cout << texts[0];
 
 	return 0; 
 }
