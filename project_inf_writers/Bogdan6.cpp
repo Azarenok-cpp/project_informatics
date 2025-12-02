@@ -1,0 +1,42 @@
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//using namespace std;
+//
+//bool v(char c) {
+//    string vowels = "¿≈®»Œ”€›ﬁﬂ‡Â∏ËÓÛ˚˝˛ˇ";
+//    for (int i = 0;i < vowels.size();i++)
+//        if (c == vowels[i]) return true;
+//    return false;
+//}
+//
+//char st(string w) {
+//    return v(w[0]) ? '√' : '—';
+//}
+//
+//char en(string w) {
+//    return v(w[w.size() - 1]) ? '√' : '—';
+//}
+//
+//int main() {
+//    ifstream f("input.txt");
+//    if (!f) return 1;
+//
+//    int GG = 0, GS = 0, SG = 0, SS = 0;
+//    string p, c;
+//
+//    if (f >> p)
+//        while (f >> c) {
+//            char a = en(p), b = st(c);
+//            if (a == '√' && b == '√') GG++;
+//            else if (a == '√' && b == '—') GS++;
+//            else if (a == '—' && b == '√') SG++;
+//            else SS++;
+//            p = c;
+//        }
+//
+//    cout << "√√:" << GG << "\n";
+//    cout << "√—:" << GS << "\n";
+//    cout << "—√:" << SG << "\n";
+//    cout << "——:" << SS << "\n";
+//}

@@ -140,10 +140,12 @@
     <None Include="..\V2\texts.zip" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bogdan6.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rodion1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
+    <ClInclude Include="logic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
