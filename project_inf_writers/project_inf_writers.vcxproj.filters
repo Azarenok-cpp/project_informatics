@@ -55,6 +55,9 @@
     <ClCompile Include="Rodion1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Rodion2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logic.h">
