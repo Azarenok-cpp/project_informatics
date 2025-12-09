@@ -144,9 +144,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Rodion1.cpp" />
     <ClCompile Include="Rodion2.cpp" />
+    <ClCompile Include="string32methods.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logic.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
