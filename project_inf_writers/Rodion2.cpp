@@ -1,22 +1,37 @@
 #include "logic.h"
+#include "util.h"
 
-string most_popular_word() {
-    string path = "..\\V2\\";
-    ifstream file1(path + "text1.txt");
-    ifstream file2(path + "text2.txt");
-    ifstream file3(path + "text3.txt");
-    ifstream file4(path + "text4.txt");
+u32string most_popular_word(u32string st) {
+	u32string x;
+	u32string res = U"";
+	map <u32string, int> words;
 
-	map<string, int> freq;
-    string word, resWord = "";
+	for (int i = 0; i < st.length(); i++)
+	{
+		if (is_wordpart(st[i])) res += tolower32(st[i]);
+	}
 
-    while (file1 >> word) {
-        for (int i = 0; i < word.size(); i++) {
-             if(isalpha(word[i])) resWord += tolower((unsigned char)word[i]);
-        }
-        cout << (resWord) << "\n";
-        freq[resWord]++;
-    }
+	while (res.length() != 0)
+	{
+		while (res.length() != 0 && res[0] == ' ')
+			res.erase(0, 1);
 
-   return freq.rbegin()->first;
+		x = res.substr(0, res.find(' '));
+
+		if(isWord(x)) words[x]++;
+
+		res.erase(0, (res.find(' ')));
+	}
+
+	u32string bestWord;
+	int bestValue = -1;
+
+	for (auto pair : words) { //каждая пара в words
+		if (pair.second > bestValue) {
+			bestValue = pair.second;
+			bestWord = pair.first;
+		}
+	}
+
+	return bestWord;
 }

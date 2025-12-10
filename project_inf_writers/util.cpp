@@ -1,5 +1,5 @@
 #include "util.h"
-
+vector <u32string> banned_words{ U"и", U"а",U"в", U"у", U"о", U"€"};//banned words
 double round_(double val) {
     return round(val * ACCURACY) / ACCURACY;
 }
@@ -34,4 +34,33 @@ bool is_rare(char32_t c) {
 bool is_punct_sign(char32_t c) {
     u32string mask = U".?!,-ЧЂї\"УД:;''()";
     return mask.find(c) != string::npos;
+}
+
+bool is_wordpart(char32_t c) {
+    u32string mask = U"йцукенгшщзхъфывапролджэ€чсмитьбюЄ…÷” ≈Ќ√Ўў««’’Џ‘џ¬јѕ–ќЋƒ∆Ёя„—ћ»“№Ѕё- ";
+    return mask.find(c) != string::npos;
+}
+
+bool isWord(u32string s) {
+    for (int i = 0; i < banned_words.size(); i++)
+    {
+        if (s == banned_words[i]) return false;
+    }
+    return true;
+}
+char32_t tolower32(char32_t ch) {
+    if (ch >= U'ј' && ch <= U'я') {
+        return ch + 32; //разница между заглавными и строчными в unicode
+    }
+    return ch;
+}
+
+u32string rework(u32string s) {
+    u32string res = U"";
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (is_wordpart(s[i])) res += tolower32(s[i]);
+    }
+
+    return res;
 }

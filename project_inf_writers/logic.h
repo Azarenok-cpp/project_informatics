@@ -5,6 +5,8 @@
 #include <Windows.h>
 #include <conio.h>
 #include <map>
+#include <vector>
+#include <codecvt>
 using namespace std;
 
 string char32_to_utf8(char32_t cp);
@@ -16,4 +18,6 @@ void vowels_and_consonants_stat(u32string s);
 void dulls_and_voiced_sounds_stat(u32string s);
 void rare_letters_stat(u32string s);
 void punctuation_stat(u32string s);
+char32_t tolower32(char32_t ch);
 
+u32string most_popular_word(u32string st);

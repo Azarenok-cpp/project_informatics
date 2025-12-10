@@ -30,6 +30,8 @@ int main() {
     rare_letters_stat(text1);
     breakl();
     punctuation_stat(text1);
+    
+    cout << utf32_to_utf8(most_popular_word(text1));
     return 0;
 }
 
