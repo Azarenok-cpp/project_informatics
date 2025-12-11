@@ -141,7 +141,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bogdan6.cpp" />
+    <ClCompile Include="Bogdan7.cpp" />
+    <ClCompile Include="C:\Users\rodio\Downloads\Telegram Desktop\Maksim1.cpp" />
+    <ClCompile Include="C:\Users\rodio\Downloads\Telegram Desktop\Maksim2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Nastya.cpp" />
     <ClCompile Include="Rodion1.cpp" />
     <ClCompile Include="Rodion2.cpp" />
     <ClCompile Include="string32methods.cpp" />

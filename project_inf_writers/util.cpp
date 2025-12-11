@@ -1,5 +1,5 @@
 #include "util.h"
-vector <u32string> banned_words{ U"è", U"à",U"â", U"ó", U"î", U"ÿ"};//banned words
+vector <u32string> banned_words{ U"è", U"à",U"â", U"ó", U"î" };//banned words
 double round_(double val) {
     return round(val * ACCURACY) / ACCURACY;
 }

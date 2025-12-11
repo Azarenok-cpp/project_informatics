@@ -16,6 +16,7 @@ bool is_punct_sign(char32_t c);
 bool is_wordpart(char32_t c);
 bool isWord(u32string s);
 u32string rework(u32string s);
+char32_t tolower32(char32_t ch);
 
 string char32_to_utf8(char32_t cp);
 string utf32_to_utf8(const u32string& s);
