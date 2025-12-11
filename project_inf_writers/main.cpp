@@ -1,29 +1,18 @@
 ﻿#include "logic.h"
 
-void breakl() {
-    for (int i = 0; i < 50; i++)
-    {
-        cout << '-';
-    }
-    cout << "\n";
-}
 int main() {
     system("chcp 65001");
     string path = "..\\V2\\";
+    ifstream fin(path + "text1.txt");
 
-    u32string text{ U"" };
-    ifstream file1(path + "text4.txt");
+    string v = "аеёиоуыэюяАЕЁИОУЫЭЮЯ", w1, w2;
+    int r[4] = { 0 };
 
-    string line;
-    while (getline(file1, line)) {
-        u32string convted = utf8_to_u32(line);
-        text += convted + U"\n";
+    if (fin >> w1) while (fin >> w2) {
+        bool a = v.find(w1.back()) != -1, b = v.find(w2[0]) != -1;
+        r[(a ? 0 : 2) + (b ? 0 : 1)]++;
+        w1 = w2;
     }
 
-    cout << utf32_to_utf8(most_popular_word(text));
-        
-
-    return 0;
+    cout << "GG: " << r[0] << "\nGS: " << r[1] << "\nSG: " << r[2] << "\nSS: " << r[3];
 }
-
-
