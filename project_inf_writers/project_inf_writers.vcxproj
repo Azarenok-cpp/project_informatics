@@ -152,7 +152,7 @@
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="logic.h" />
+    <ClInclude Include="C:\Users\rodio\Downloads\Telegram Desktop\logic.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

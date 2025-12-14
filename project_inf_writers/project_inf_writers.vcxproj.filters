@@ -78,7 +78,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="logic.h">
+    <ClInclude Include="C:\Users\rodio\Downloads\Telegram Desktop\logic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="util.h">
