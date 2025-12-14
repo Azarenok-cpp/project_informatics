@@ -8,7 +8,7 @@ double round_(double val);
 
 bool is_letter(char32_t c);
 bool isConsonant(char32_t c);
-bool isVowel(char32_t c);
+bool is_vowel(char32_t c);
 bool is_voiced(char32_t c);
 bool is_dull(char32_t c);
 bool is_rare(char32_t c);
@@ -21,3 +21,10 @@ char32_t tolower32(char32_t ch);
 string char32_to_utf8(char32_t cp);
 string utf32_to_utf8(const u32string& s);
 u32string utf8_to_u32(const string& s);
+
+
+bool isVowel(char c);
+char firstLetterType(const string& word);
+char lastLetterType(const string& word);
+
+int get_char_type(char c);

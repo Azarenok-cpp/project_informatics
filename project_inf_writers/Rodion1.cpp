@@ -27,7 +27,7 @@ void vowels_and_consonants_stat(u32string s) {
     
     for (int i = 0; i < s.length(); i++) {
         if (isConsonant(tolower(s[i]))) cons[s[i]]++;
-        else if (isVowel(tolower(s[i]))) vow[s[i]]++;
+        else if (is_vowel(tolower(s[i]))) vow[s[i]]++;
     }
 
     for (const auto& pair : vow) {

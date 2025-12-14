@@ -14,7 +14,7 @@ bool isConsonant(char32_t c) {
     return mask.find(c) != string::npos;
 }
 
-bool isVowel(char32_t c) {
+bool is_vowel(char32_t c) {
     u32string mask = U"¸óåûàîıÿèş";
     return mask.find(c) != string::npos;
 }
@@ -64,3 +64,30 @@ u32string rework(u32string s) {
 
     return res;
 }
+
+//Bogdan
+bool isVowel(char c) {
+    string vowels = "ÀÅ¨ÈÎÓÛİŞßàå¸èîóûışÿ";
+    for (int i = 0; i < vowels.size(); i++)
+        if (c == vowels[i]) return true;
+    return false;
+}
+
+char firstLetterType(const string& word) {
+    return isVowel(word[0]) ? 'Ã' : 'Ñ';
+}
+
+char lastLetterType(const string& word) {
+    return isVowel(word[word.size() - 1]) ? 'Ã' : 'Ñ';
+}
+
+
+//Maksim
+const string GL_CHARS = "àå¸èîóûışÿÀÅ¨ÈÎÓÛİŞß";
+const string SG_CHARS = "áâãäæçéêëìíïğñòôõö÷øùúüÁÂÃÄÆÇÉÊËÌÍÏĞÑÒÔÕÖ×ØÙÚÜ";
+int get_char_type(char c) {
+    if (GL_CHARS.find(c) != string::npos) return 1; // Ãëàñíàÿ
+    if (SG_CHARS.find(c) != string::npos) return 2; // Ñîãëàñíàÿ
+    return 0; // Íå áóêâà
+}
+
