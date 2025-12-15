@@ -1,4 +1,5 @@
 ﻿#include "util.h"
+#include "logic.h"
 
 double total = 0;
 

@@ -1,5 +1,5 @@
-
-
+#include "logic.h"
+#include "util.h"
 void task6(){
     ifstream fin("..\\V2\\text1.txt");
 
